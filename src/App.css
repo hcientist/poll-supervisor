@@ -1,38 +1,68 @@
-.App {
+body {
+  background-color: hotpink;
+  color: black;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.correct-summary input[type='radio'], .correct-summary label {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
   color: white;
+  text-shadow: 1px 1px 2px black;
+  margin:0;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-height: 667px) {
+  h1 {
+    font-size: 3.1rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.correct-summary form {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.correct-summary button[type='submit'] {
+  background-color: #6200bf;
+  border: 1px solid #6200bf;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  box-shadow: none;
+}
+
+.correct-summary button[type='submit']:hover, .correct-summary button[type='submit']:active {
+  background-color: #500398;
+  border: 1px solid #500398;
+}
+
+.correct-summary button[type='submit'][value='No'] {
+  background-color: #f7c600;
+  border: 1px solid #f7c600;
+}
+
+.correct-summary button[type='submit'][value='No']:hover, .correct-summary button[type='submit'][value='No']:active {
+  background-color: #e3b500;
+  border: 1px solid #e3b500;
+}
+
+.correct-summary .form-control {
+  /* display: inline-block; */
 }
